@@ -11,6 +11,7 @@ public class Review03 {
         base01.setDraw(4);
         base01.report();
 
+
         BaseBallTeam base02 = new BaseBallTeam();
         base02.setName("横浜DeNAベイスターズ");
         base02.setWin(73);

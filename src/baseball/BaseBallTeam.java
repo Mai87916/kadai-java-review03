@@ -6,7 +6,7 @@ public class BaseBallTeam {
     private int win;
     private int lose;
     private int draw;
-    private double a;
+
 
     public BaseBallTeam() {
 
@@ -14,7 +14,7 @@ public class BaseBallTeam {
         win = 0;
         lose = 0;
         draw = 0;
-        a = 0;
+
     }
 
     public String getName() {
@@ -49,21 +49,16 @@ public class BaseBallTeam {
         this.draw = draw;
     }
 
-    public double getA() {
-        return a;
-    }
 
-    public void setA(double a) {
-        this.a = a;
-    }
 
-    public double getRate(int win, int lose) {
+
+    public double getRate() {
         double a = (double)win / ( (double)win + lose );
         return a;
     }
 
     public void report() {
-        a = getRate(win, lose);
+        double a = getRate();
         System.out.println(name + "の2022年の成績は" + win + "勝" + lose + "敗" + draw + "分" + "、勝率は" +  a + "です。");
     }
 }
