@@ -57,13 +57,13 @@ public class BaseBallTeam {
         this.a = a;
     }
 
-    public void getRate() {
-        double a = win % ( win + lose );
-        System.out.println(a);
+    public double getRate(int win, int lose) {
+        double a = (double)win / ( (double)win + lose );
+        return a;
     }
 
     public void report() {
-
-        System.out.println(name + "の2022年の成績は" + win + "勝" + lose + "敗" + draw + "分" + "、勝率は0." +  a + "です。");
+        a = getRate(win, lose);
+        System.out.println(name + "の2022年の成績は" + win + "勝" + lose + "敗" + draw + "分" + "、勝率は" +  a + "です。");
     }
 }
